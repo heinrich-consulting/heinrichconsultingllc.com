@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Heinrich Consulting LLC provides ecommerce and Amazon marketplace consulting, product marketing, and is developing a hunting map app.">
+  <title>Heinrich Consulting LLC</title>
+  <style>
+    :root {
+      --ink: #1c1917;
+      --muted: #57534e;
+      --line: #d6d3d1;
+      --paper: #f7f4ef;
+      --card: #fffcf8;
+      --accent: #1f3d2b;
+      --accent-soft: #e8eee9;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Outfit", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a { color: var(--accent); text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
+
+    .wrap {
+      width: min(920px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      padding: 1.25rem 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .mark {
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 0.45rem;
+      background: var(--accent);
+      color: #f7f4ef;
+      display: grid;
+      place-items: center;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    .brand-name {
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      font-size: 1.05rem;
+      line-height: 1.2;
+    }
+
+    .brand-sub {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    main { flex: 1; }
+
+    .hero {
+      padding: 4.5rem 0 3rem;
+    }
+
+    .eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.9rem;
+    }
+
+    h1 {
+      font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2.15rem, 5vw, 3.4rem);
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 1.15rem;
+    }
+
+    .lede {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 38rem;
+    }
+
+    h2 {
+      font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      padding-bottom: 3.5rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 0.75rem;
+      padding: 1.35rem 1.3rem 1.45rem;
+    }
+
+    .card h3 {
+      font-size: 1.02rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.45rem;
+    }
+
+    .card p { color: var(--muted); font-size: 0.98rem; }
+
+    .contact {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 0.85rem;
+      padding: 1.75rem 1.6rem;
+      margin-bottom: 4rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 1.5rem 2rem;
+    }
+
+    .contact p, address {
+      font-style: normal;
+      color: var(--muted);
+    }
+
+    .contact dt {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .contact dd {
+      margin: 0 0 1rem;
+    }
+
+    .contact dd:last-child { margin-bottom: 0; }
+
+    .placeholder {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 0.3rem;
+      padding: 0.1rem 0.4rem;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 1.25rem 0 1.6rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    footer a { color: inherit; }
+
+    @media (max-width: 720px) {
+      .hero { padding: 2.75rem 0 2rem; }
+      .services { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact { margin-bottom: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <span class="mark">HC</span>
+        <span>
+          <span class="brand-name">Heinrich Consulting LLC</span>
+          <span class="brand-sub">Michigan</span>
+        </span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <p class="eyebrow">Michigan limited liability company</p>
+      <h1>Consulting for ecommerce product sales, service, and marketing.</h1>
+      <p class="lede">Heinrich Consulting LLC advises sellers and brands on ecommerce and Amazon marketplace work, including product marketing. We are also building a hunting map app.</p>
+    </section>
+
+    <section class="wrap" aria-labelledby="services-heading">
+      <h2 id="services-heading">Services</h2>
+      <div class="services">
+        <article class="card">
+          <h3>Ecommerce and Amazon consulting</h3>
+          <p>Marketplace consulting for product sellers, covering catalog, operations, and sales on Amazon and other ecommerce channels.</p>
+        </article>
+        <article class="card">
+          <h3>Product marketing</h3>
+          <p>Practical marketing support for product businesses, including positioning, listing content, and advertising guidance.</p>
+        </article>
+        <article class="card">
+          <h3>Hunt mapping app</h3>
+          <p>A hunting map app is in development and will be published under Heinrich Consulting LLC when it is ready.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap" aria-labelledby="contact-heading">
+      <div class="contact">
+        <div class="contact-grid">
+          <div>
+            <h2 id="contact-heading">Contact</h2>
+            <p>Reach Heinrich Consulting LLC by phone or mail.</p>
+          </div>
+          <dl>
+            <dt>Mailing address</dt>
+            <dd>
+              <address>
+                209 N Court St<br>
+                Au Gres, MI 48703
+              </address>
+            </dd>
+            <dt>Phone</dt>
+            <dd><a href="tel:+19893874449">989-387-4449</a></dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 Heinrich Consulting LLC</span>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+  </footer>
+</body>
+</html>
